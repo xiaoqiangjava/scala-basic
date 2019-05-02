@@ -6,7 +6,8 @@ object FunctionDemo {
         // scala中函数是一等公民, 即函数就是一个values
         // 函数可以带有参数列表, 需要声明参数类型
         // =>左边是参数列表, 右边是body
-        val addOne = (x: Int) => x + 2
+        // 函数的返回值类型需要指定A => B, 即接受参数列表的类型到返回值的类型
+        val addOne: Int => Int = (x: Int) => x + 2
         println(addOne(1))
         // 带有两个参数的函数
         val addTwo = (x: Int, y: Int) => x + y
