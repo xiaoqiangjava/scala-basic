@@ -1,7 +1,5 @@
 package com.xiaoqiang.scala.basic.apply
 
-import scala.None
-
 /*
  * apply方法用于伴生对象中，创建对象时就可以省略new关键字，在伴生对象中使用类名加apply方法
  * 的参数列表形式就可以默认去调用apply方法，该方法的返回值是类对象
@@ -19,9 +17,10 @@ class ApplyDemo {
     }
 }
 
-object ApplyDemo{
+object ApplyDemo{ // ApplyDemo的类型是ApplyDemo$, ApplyDemo是一个对象
     /*
      * apply方法，参数列表可以与伴生类的构造器参数列表保持一致，也可以不用保持一直
+     * apply方法类似于Java中getInstance方法，用来获取伴生类的实例
      */
     def apply(name: String, age: Int): ApplyDemo = new ApplyDemo(name, age)
 

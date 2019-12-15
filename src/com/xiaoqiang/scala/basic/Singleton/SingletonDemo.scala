@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 /*
  * 在Scala中没有静态方法和静态字段，但是可以使用object关键之加类名的语法结构时间同样的功能
  * 1. 工具类，存放常亮和工具方法
- * 2. 实现单例模式
+ * 2. 实现单例模式: scala中，单独的一个object就是单例的
  */
 object SingletonDemo {
     def main(args: Array[String]): Unit = {
