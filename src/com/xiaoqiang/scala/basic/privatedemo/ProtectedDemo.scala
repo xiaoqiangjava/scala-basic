@@ -12,10 +12,8 @@ object ProtectedDemo {
         // private[privatedemo]指定包权限
         println(manager.age)
         // 导入的类的重命名: 如果存在多个重名的类，可以通过包的重命名进行修改名称，防止使用时用错
-        import java.util.{HashMap => JavaHashMap}
-        val map = new JavaHashMap[String]()
-        // 隐藏导入的类
-        import java.util.{HashMap => _}
+        import java.util.{HashMap=>JavaHashMap}
+        val map = new JavaHashMap[String, String]()
     }
 }
 
