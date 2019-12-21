@@ -97,5 +97,7 @@ class Emp1(val ename: String) extends {
     // 预定以， 可以预定义一些属性。
 } with Person(ename) {
     override var gender: String = _
-    override val age: Int = _
+    override val age: Int = 10
+
+    override def hello(): Unit = ???
 }
