@@ -7,6 +7,7 @@ package com.xiaoqiang.scala.basic.datastruct.function
  * fold函数：折叠，默认使用的是foldLeft()(),第一个参数放置在集合的左边即头部
  * foldRight是将第一个参数放置在集合的尾部，即右边
  * foldLeft和foldRight有一个简单的写法：/: 和:\
+ * zip: 拉链，List(1, 2, 3), List(4, 5) 结果：List((1, 4), (2, 5))
  */
 object ReduceFunction {
     def main(args: Array[String]): Unit = {
