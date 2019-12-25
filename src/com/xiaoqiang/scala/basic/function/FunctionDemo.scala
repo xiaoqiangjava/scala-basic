@@ -2,6 +2,9 @@ package com.xiaoqiang.scala.basic.function
 
 /*
  * 函数在函数式编程中是一等公民，即函数跟其他的类型一样，都可以作为变量的声明，参数，返回值
+ * 闭包函数：
+ * 在高阶函数中，函数可以返回函数，当返回的函数使用了外部函数的局部变量时，就形成了闭包，因为局部变量本属于函数本生，当函数结束后，局部变量也
+ * 会回收，但当函数返回函数时，外部函数的局部变量不会回收。
  */
 object FunctionDemo {
     def main(args: Array[String]): Unit = {
@@ -28,6 +31,10 @@ object FunctionDemo {
         println(addThree(1, 2, 3))
         // 调用函数
         print("hello world")
+
+        // 闭包: x不是返回函数的局部变量，因此是闭包。
+        def minus(x: Int) = (y: Int) => x - y
+        println(minus(20)(10))
     }
 
     /*
